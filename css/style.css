@@ -194,6 +194,7 @@ body {
 }
 
 .hero-btn {
+  display: inline-block;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-right: 32px;
@@ -309,7 +310,6 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   width: 264px;
-  height: 380px;
 }
 
 .workers-title {
@@ -320,6 +320,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 
 .workers-desc {
@@ -329,9 +331,18 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  padding-bottom: 32px;
 }
 
 /* =================PORTFOLIO================= */
+
+.filters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
 
 .filters-btn {
   color: #4d5ae5;
@@ -343,11 +354,13 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  display: inline-block;
   letter-spacing: 0.04em;
   color: #4d5ae5;
+  padding: 12px 24px;
+}
+.filters-item:not(:last-child) {
+  margin-right: 24px;
 }
 
 .filters-btn:hover,
@@ -359,11 +372,26 @@ body {
   border-radius: 4px;
 }
 
+.projekts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 120px;
+}
+
 .projects-list-item {
   background: #ffffff;
-  border: 1px solid #e7e9fc;
-  width: 360px;
-  height: 420px;
+  flex-basis: calc((100%-48px) / 3);
+}
+
+.projects-list-item:nth-child(n+4) {
+  margin-top: 12px;
+}
+
+.project-desc {
+background: #FFFFFF;
+border: 1px solid #E7E9FC; 
+border-top: none; 
 }
 
 .projects-title {
@@ -373,11 +401,17 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  
 }
-.projects-desc {
+.project-category {
   font-family: var(--primary-font);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  padding-left: 16px;
+  padding-bottom: 32px;
 }
