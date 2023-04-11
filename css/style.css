@@ -101,10 +101,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-
   display: flex;
   align-items: center;
-
   margin-right: 76px;
 }
 .logotype-right {
@@ -153,12 +151,20 @@ body {
   background: #2e2f42;
 }
 
+.footer-logotype {
+  padding-top: 100px;
+  margin-bottom: 16px;
+}
+
 .footer-desc {
   font-family: var(--primary-font);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+
+  padding-bottom: 100px;
+  width: 264px;
 }
 
 .footer-logotype-right {
@@ -281,7 +287,7 @@ body {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px ;
+  gap: 24px;
 }
 
 .team-title {
