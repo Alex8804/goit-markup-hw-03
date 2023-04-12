@@ -289,7 +289,6 @@ body {
 
 .team-list {
   display: flex;
-  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -352,6 +351,7 @@ body {
   margin-bottom: 72px;
   row-gap: 48px;
   column-gap: 24px;
+  gap: 24px;
 }
 
 .filters-btn {
@@ -383,7 +383,8 @@ body {
 .projekts-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .projects-list-link {
@@ -392,8 +393,6 @@ body {
 
 .projects-list-item {
   background: #ffffff;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .project-desc {
