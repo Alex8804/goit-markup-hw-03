@@ -34,8 +34,7 @@ button {
   width: 1158px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
 }
 
 .section {
@@ -64,8 +63,6 @@ body {
 
 .top-header {
   border-bottom: 1px solid #e7e9fc;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .page-header-container {
@@ -85,13 +82,10 @@ body {
   gap: 40px;
 }
 
-.menu-item:not(:last-child) {
-  /* margin-right: 40px; */
-}
-
 .contacts-list {
   display: flex;
   align-items: center;
+  gap: 40px;
 }
 
 .logotype {
@@ -105,6 +99,8 @@ body {
   display: flex;
   align-items: center;
   margin-right: 76px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .logotype-right {
   color: #2e2f42;
@@ -117,6 +113,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .menu-link:hover,
@@ -135,25 +133,24 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .contacts:hover,
 .contacts:focus {
   color: var(--accent-color);
 }
-
-.mail {
-  margin-right: 40px;
-}
-
 /* ====================FOOTER==================== */
 
 .footer {
   background: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-logotype {
-  padding-top: 100px;
+  display: inline-block;
   margin-bottom: 16px;
 }
 
@@ -163,9 +160,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-
-  padding-bottom: 100px;
-  width: 264px;
+  max-width: 264px;
 }
 
 .footer-logotype-right {
@@ -212,7 +207,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
@@ -312,11 +307,15 @@ body {
 }
 
 .team-list-item {
+  flex-basis: calc((100%-72px) / 4);
+}
+
+.desc {
   background: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  width: 264px;
+  padding: 32px 16px;
 }
 
 .workers-title {
@@ -327,28 +326,32 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 
-.workers-desc {
+.team-position {
   font-family: var(--primary-font);
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  padding-bottom: 32px;
 }
 
 /* =================PORTFOLIO================= */
+
+.portfolio-section {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 
 .filters-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 96px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 
 .filters-btn {
@@ -366,9 +369,6 @@ body {
   color: #4d5ae5;
   padding: 12px 24px;
 }
-.filters-item:not(:last-child) {
-  margin-right: 24px;
-}
 
 .filters-btn:hover,
 .filters-btn:focus {
@@ -377,28 +377,30 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  border: 1px solid transparent;
 }
 
 .projekts-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  padding-bottom: 120px;
+  justify-content: space-between;
+}
+
+.projects-list-link {
+  width: calc((100%-48px) / 3);
 }
 
 .projects-list-item {
   background: #ffffff;
-  flex-basis: calc((100%-48px) / 3);
-}
-
-.projects-list-item:nth-child(n + 4) {
-  margin-top: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .project-desc {
   background: #ffffff;
   border: 1px solid #e7e9fc;
   border-top: none;
+  padding: 32px 16px;
 }
 
 .projects-title {
@@ -408,9 +410,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
-  padding-top: 32px;
-  padding-left: 16px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .project-category {
   font-family: var(--primary-font);
@@ -418,6 +418,4 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  padding-left: 16px;
-  padding-bottom: 32px;
 }
